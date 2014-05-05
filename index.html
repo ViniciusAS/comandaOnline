@@ -10,7 +10,7 @@
         <title>Comanda Online</title>
         <script type="text/javascript">
             $(function(){
-                $('label.check').on('click', function(){
+                $('label.check').bind('click', function(){
                     var slider = $(this).parents('li').find('div.ui-slider');
                     if (slider.css('display') == 'none'){
                         slider.show();
