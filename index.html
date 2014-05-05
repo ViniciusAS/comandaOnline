@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="themes/jQuery.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        <title>Comanda Online</title>
+        <script type="text/javascript">
+            $(function(){
+                $('label.check').on('click', function(){
+                    var slider = $(this).parents('li').find('div.ui-slider');
+                    if (slider.css('display') == 'none'){
+                        slider.show();
+                    } else {
+                        slider.hide();
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body data-role="page">
+        <div class="ui-header ui-bar-a" data-swatch="a" data-theme="a" data-form="ui-bar-a" data-role="header" role="banner">
+		<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">
+                    Comanda Online
+                </h1>
+	</div>
+	
+	<div class="ui-content ui-page-theme-a" data-form="ui-page-theme-a" data-theme="a" role="main">
+	
+                <div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+			<h4>Bem vindo à comanda online</h4>
+			<p>
+                            Selecione aqui seu pedido e a quantidade de cada um dos itens, o pedido logo será entregue em sua mesa por um de nossos garçons
+			</p>
+		</div>
+
+		<ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+                    <li data-role="list-divider" data-theme="a" data-swatch="a" data-form="ui-bar-a" role="heading" class="ui-li-divider ui-bar-a ui-first-child">
+                        Produtos
+                    </li>
+                    <li data-role="ui-checkbox">
+                        <label for="checkbox-a" data-form="ui-btn-up-a" class="check ui-btn ui-corner-all ui-btn-a ui-btn-icon-left ui-last-child ui-checkbox-off">
+                            Torre
+                        </label>
+                        <input data-theme="a" type="checkbox" name="checkbox-a" id="checkbox-a" data-cacheval="false">
+                        <div class="ui-slider" style="display: none;">
+                            <input type="number" data-type="range" name="slider1" id="slider1" value="1" min="0" max="20" data-theme="a" class="ui-shadow-inset ui-body-a ui-corner-all ui-slider-input">
+                        </div>
+                    </li>
+                    <li data-role="ui-checkbox">
+                        <label for="checkbox-b" data-form="ui-btn-up-a" class="check ui-btn ui-corner-all ui-btn-a ui-btn-icon-left ui-last-child ui-checkbox-off">
+                            Refrigerante
+                        </label>
+                        <input data-theme="a" type="checkbox" name="checkbox-b" id="checkbox-b" data-cacheval="false">
+                        <div class="ui-slider" style="display: none;">
+                            <input type="number" data-type="range" name="slider1" id="slider1" value="1" min="0" max="20" data-theme="a" class="ui-shadow-inset ui-body-a ui-corner-all ui-slider-input">
+                        </div>
+                    </li>
+                    <li data-role="ui-checkbox">
+                        <label for="checkbox-c" data-form="ui-btn-up-a" class="check ui-btn ui-corner-all ui-btn-a ui-btn-icon-left ui-last-child ui-checkbox-off">
+                            Picadinho
+                        </label>
+                        <input data-theme="a" type="checkbox" name="checkbox-c" id="checkbox-c" data-cacheval="false">
+                        <div class="ui-slider" style="display: none; ">
+                            <input type="number" data-type="range" name="slider1" id="slider1" value="1" min="0" max="20" data-theme="a" class="ui-shadow-inset ui-body-a ui-corner-all ui-slider-input">
+                        </div>
+                    </li>
+                    <li class="ui-last-child">
+                        <a class="ui-btn-a ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-a" data-swatch="a" data-theme="a" href="#">
+                            Finalizar pedido
+                        </a>
+                    </li>
+		</ul>
+        </div>
+    </body>
+</html>
